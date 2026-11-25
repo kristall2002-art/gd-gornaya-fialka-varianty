@@ -45,3 +45,22 @@ details.acc summary .muted{font-weight:600;font-size:.95rem;margin-left:auto;mar
   .rfoot .btn.sm{margin-left:0;width:100%}
   details.acc summary{flex-wrap:wrap}details.acc summary .muted{margin-left:0}
 }
+
+/* правки после проверки на ПК «Рязань» 25.11 */
+.logo{flex:0 1 auto;min-width:0}.logo b{display:block;max-width:100%;overflow-wrap:anywhere}
+.gtop h1{font-size:clamp(1.9rem,3.6vw,3rem)}
+.banner h1{font-size:clamp(1.8rem,3.4vw,2.7rem)}
+@media (max-width:1180px){body.sb .hgrid{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:640px){
+  .stable{min-width:0}.stable,.stable tbody{display:block}.stable thead{display:none}
+  .stable tr{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:4px 14px;padding:14px 16px;border-bottom:1px solid var(--line,rgba(127,127,127,.22))}
+  .stable td{border:0;padding:2px 0;text-align:left!important;white-space:nowrap}
+  .stable td:first-child{grid-column:1/-1;font-family:var(--fh);font-size:1.05rem;white-space:normal}
+  .stable td[data-l]::before{content:attr(data-l) ' ';color:var(--muted);font-weight:500}
+  .tscroll{overflow:visible}
+}
+@media (max-width:560px){
+  h1{font-size:clamp(1.5rem,7vw,2.1rem)}
+  .logo b{font-size:1.12rem}.logo small{font-size:.66rem}
+  .hdr .wrap{gap:12px}
+}
