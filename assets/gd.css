@@ -1,0 +1,47 @@
+/* Дополнения для сайтов гостевых домов: карточки номеров, мозаика фото, таблица сезонов, мессенджеры */
+.rooms .room{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.room .rimg{width:100%;aspect-ratio:4/3;object-fit:cover}
+.room.big .rimg{aspect-ratio:16/10}
+.room .rin{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1;min-width:0}
+.room .rin h3{margin:0}
+.room .rin p{margin:0}
+.room .facts{gap:6px}.room .chip{font-size:.8rem;padding:5px 10px}
+.rfoot{margin-top:auto;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px;padding-top:6px}
+.rfoot .rp{font-family:var(--fh);font-size:1.35rem;color:var(--accent)}
+.rfoot .btn.sm{margin-left:auto;padding:9px 16px;font-size:.88rem}
+.knums>div{display:flex;flex-direction:column;gap:6px;min-width:0}
+.knums b{font-family:var(--fh);font-size:clamp(1.9rem,3.6vw,3rem);line-height:1;color:var(--accent);overflow-wrap:anywhere}
+.knums span{color:var(--muted)}
+.gtop .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:40px;align-items:center}
+.mosaic{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:150px;gap:10px}
+.mosaic img{width:100%;height:100%;object-fit:cover;border-radius:var(--r,14px)}
+.mosaic img:first-child{grid-column:span 2;grid-row:span 2}
+.mosaic img:nth-child(4){grid-column:span 2}
+.gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.gal img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:var(--r,12px)}
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--r,14px);background:var(--card);box-shadow:var(--sh,none)}
+.stable{width:100%;border-collapse:collapse;min-width:520px}
+.stable th,.stable td{padding:14px 16px;text-align:right;border-bottom:1px solid var(--line,rgba(127,127,127,.22));white-space:nowrap}
+.stable th:first-child,.stable td:first-child{text-align:left;white-space:normal}
+.stable thead th{font-family:var(--fh);font-size:.95rem;color:var(--accent);background:var(--soft,rgba(0,0,0,.04))}
+.stable td{font-weight:700}.stable td:first-child{font-weight:600}
+.rulesw{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:40px;align-items:start}
+.rulesw .info li{grid-template-columns:150px minmax(0,1fr)}
+.accroom{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:20px;align-items:start}
+.accroom img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r,12px)}
+details.acc summary .muted{font-weight:600;font-size:.95rem;margin-left:auto;margin-right:10px;white-space:nowrap}
+.mlinks{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 10px}
+.mlinks .mbtn{display:inline-block;padding:10px 16px;border-radius:12px;background:#f1f1f1;color:#111;font-weight:700;text-decoration:none}
+.mtl a{font-weight:700}
+.near .card h3{margin-bottom:4px}
+@media (max-width:980px){
+  .gtop .wrap,.rulesw{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:560px){
+  .mosaic{grid-auto-rows:110px}
+  .gal{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .accroom{grid-template-columns:minmax(0,1fr)}
+  .rulesw .info li{grid-template-columns:minmax(0,1fr)}
+  .rfoot .btn.sm{margin-left:0;width:100%}
+  details.acc summary{flex-wrap:wrap}details.acc summary .muted{margin-left:0}
+}
