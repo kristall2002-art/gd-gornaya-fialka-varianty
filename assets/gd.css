@@ -64,3 +64,4 @@ details.acc summary .muted{font-weight:600;font-size:.95rem;margin-left:auto;mar
   .logo b{font-size:1.12rem}.logo small{font-size:.66rem}
   .hdr .wrap{gap:12px}
 }
+@media (max-width:640px){.stable td{white-space:normal}.stable td[data-l]::before{display:block;font-size:.8rem}}
